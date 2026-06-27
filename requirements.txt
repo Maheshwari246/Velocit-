@@ -1,1 +1,6 @@
-
+streamlit
+opencv-python
+ultralytics
+numpy
+torch
+easyocr
