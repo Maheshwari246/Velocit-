@@ -12,7 +12,10 @@ import base64
 st.set_page_config(layout="wide")
 st.title("🚘 VelocIT: License Plate Detection")
 
-uploaded_file = st.file_uploader("📤 Upload a traffic video", type=["mp4", "avi", "mov"])
+uploaded_file = st.file_uploader(
+    "📤 Upload a traffic video",
+    type=["mp4", "avi", "mov"]
+)
 
 roi_coords = None
 
@@ -20,7 +23,7 @@ if uploaded_file is not None:
     video_bytes = uploaded_file.read()
     encoded_video = base64.b64encode(video_bytes).decode("utf-8")
 
-    st.markdown("### 🎞️ ")
+    st.markdown("### 🎞️")
     st.markdown(
         f"""
         <div style='max-width: 500px;'>
@@ -44,9 +47,6 @@ if uploaded_file is not None:
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         image = Image.fromarray(frame_rgb)
 
-roi_coords = None
-
-
     if st.button("▶️ Run Detection"):
         with st.spinner("Processing..."):
             output_path = process_video(temp_video_path, roi=roi_coords)
@@ -56,8 +56,10 @@ roi_coords = None
         if output_path and os.path.exists(output_path):
             with open(output_path, "rb") as file:
                 out_bytes = file.read()
+
             encoded_output = base64.b64encode(out_bytes).decode("utf-8")
-            st.markdown("### 📽️ Output Video (smaller display)")
+
+            st.markdown("### 📽️ Output Video")
             st.markdown(
                 f"""
                 <div style='max-width: 500px;'>
