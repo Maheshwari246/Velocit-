@@ -52,15 +52,16 @@ if uploaded_file is not None:
         canvas_height = int(image.height * (canvas_width / image.width))  # Adjust height based on width
 
         canvas_result = st_canvas(
-            fill_color="rgba(255, 165, 0, 0.3)",
-            stroke_width=3,
-            stroke_color="#FF0000",
-            background_image=image,
-            update_streamlit=True,
-            height=canvas_height,
-            width=canvas_width,
-            drawing_mode="rect",
-            key="canvas",
+    fill_color="rgba(255,165,0,0.3)",
+    stroke_width=3,
+    stroke_color="#FF0000",
+    background_image=image,
+    update_streamlit=True,
+    height=canvas_height,
+    width=canvas_width,
+    drawing_mode="rect",
+    display_toolbar=True,
+    key="canvas",
         )
 
         if canvas_result.json_data and len(canvas_result.json_data["objects"]) > 0:
