@@ -44,7 +44,7 @@ if uploaded_file is not None:
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         image = Image.fromarray(frame_rgb)
 
-
+roi_coords = None
 
         if canvas_result.json_data and len(canvas_result.json_data["objects"]) > 0:
             obj = canvas_result.json_data["objects"][0]
