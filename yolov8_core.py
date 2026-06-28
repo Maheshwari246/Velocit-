@@ -10,10 +10,15 @@ reader = easyocr.Reader(['en'])
 model = YOLO("yolov8n.pt")
 
 def estimate_speed(distance_px, time_sec, ppm=10):
+    if time_sec <= 0:
+        return 0
+
     distance_m = distance_px / ppm
     speed_mps = distance_m / time_sec
     speed_kmph = speed_mps * 3.6
     return round(speed_kmph, 2)
+
+
 
 def process_video(video_path, save_path=None, roi=None):
     os.makedirs("outputs", exist_ok=True)
