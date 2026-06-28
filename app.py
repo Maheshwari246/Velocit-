@@ -46,13 +46,6 @@ if uploaded_file is not None:
 
 roi_coords = None
 
-        if canvas_result.json_data and len(canvas_result.json_data["objects"]) > 0:
-            obj = canvas_result.json_data["objects"][0]
-            left = int(obj["left"])
-            top = int(obj["top"])
-            width = int(obj["width"])
-            height = int(obj["height"])
-            roi_coords = (left, top, left + width, top + height)
 
     if st.button("▶️ Run Detection"):
         with st.spinner("Processing..."):
