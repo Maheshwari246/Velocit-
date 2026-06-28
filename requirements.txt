@@ -1,9 +1,9 @@
 
-streamlit
+streamlit==1.36.0
+streamlit-drawable-canvas==0.9.3
 opencv-python-headless
 ultralytics
 numpy
 torch
 easyocr
-streamlit-drawable-canvas==0.9.3
 Pillow
