@@ -4,3 +4,4 @@ ultralytics
 numpy
 torch
 easyocr
+streamlit-drawable-canvas
