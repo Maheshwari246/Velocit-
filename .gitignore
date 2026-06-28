@@ -1,5 +1,11 @@
-
 __pycache__/
-*.pyc
 outputs/
+*.pt
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.DS_Store
+.env
+# Ignore large video files
 *.mp4
