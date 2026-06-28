@@ -8,6 +8,3 @@ Vehicle Detection using YOLOv8 + Streamlit
 - Video upload
 - Processed output video download
 
-## Run locally
-pip install -r requirements.txt
-streamlit run app.py
