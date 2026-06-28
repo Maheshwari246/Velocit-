@@ -5,7 +5,6 @@ os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 import streamlit as st
 import tempfile
 from yolov8_core import process_video
-from streamlit_drawable_canvas import st_canvas
 from PIL import Image
 import cv2
 import base64
