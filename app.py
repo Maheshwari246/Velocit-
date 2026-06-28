@@ -59,16 +59,5 @@ if uploaded_file is not None:
 
             encoded_output = base64.b64encode(out_bytes).decode("utf-8")
 
-            st.markdown("### 📽️ Output Video")
-            st.markdown(
-                f"""
-                <div style='max-width: 500px;'>
-                    <video controls style='width: 100%; height: auto;'>
-                        <source src="data:video/mp4;base64,{encoded_output}" type="video/mp4">
-                    </video>
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
-        else:
-            st.error("❌ Couldn't load output video.")
+            st.markdo
+            
